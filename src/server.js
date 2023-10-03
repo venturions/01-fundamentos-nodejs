@@ -14,10 +14,10 @@ const server = http.createServer((req, res) => {
             id: 1,
             name: 'John Doe', email: 'johndoe@example.com'
         })
-        return res.end('Criação de usuário')
+        return res.writeHead(201).end()
     }
 
-    return res.end('Hello World')
+    return res.writeHead(404).end()
 
 })
 
